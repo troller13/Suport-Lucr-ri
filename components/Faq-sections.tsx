@@ -17,7 +17,7 @@ const faqData = [
   {
     question: "Ce domenii acoperiți?",
     answer:
-      "Acoperim o gamă largă de domenii, printre care Drept, Filologie, Istorie și Filosofie, Economie, Matematică și Informatică, Biologie, Chimie, Psihologie, Arte Plastice și Design și multe altele.",
+      "Acoperim o gamă largă de domenii, printre care  Pedagogie și Psihopedagogie, Drept, Filologie, Istorie și Filosofie, Economie, Matematică și Informatică, Biologie, Chimie, Psihologie, Arte Plastice și Design și multe altele.",
   },
   {
     question: "Lucrarea va trece verificarea antiplagiat?",
