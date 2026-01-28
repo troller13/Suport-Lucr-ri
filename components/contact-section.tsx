@@ -1,12 +1,17 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
-    <main
+    <motion.main
       id="contact"
       className="pt-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
     >
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-center mb-12 text-foreground">
         Comandă teza ta!
@@ -26,7 +31,6 @@ export default function ContactPage() {
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value="http://localhost:3000/" />
 
-        {/* rămâi pe aceeași pagină */}
         <div>
           <label
             htmlFor="firstName"
@@ -42,6 +46,7 @@ export default function ContactPage() {
             className="w-full px-4 py-3 border border-[#d4a853] rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
           />
         </div>
+
         <div>
           <label
             htmlFor="lastName"
@@ -57,6 +62,7 @@ export default function ContactPage() {
             className="w-full px-4 py-3 border border-[#d4a853] rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
           />
         </div>
+
         <div>
           <label htmlFor="email" className="block text-sm text-foreground mb-2">
             Email <span className="text-red-500">*</span>
@@ -69,6 +75,7 @@ export default function ContactPage() {
             className="w-full px-4 py-3 border border-[#d4a853] rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
           />
         </div>
+
         <div>
           <label htmlFor="phone" className="block text-sm text-foreground mb-2">
             Număr de telefon
@@ -80,6 +87,7 @@ export default function ContactPage() {
             className="w-full px-4 py-3 border border-[#d4a853] rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
           />
         </div>
+
         <div>
           <label
             htmlFor="message"
@@ -95,6 +103,7 @@ export default function ContactPage() {
             className="w-full px-4 py-3 border border-[#d4a853] rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-[#d4a853] resize-none"
           />
         </div>
+
         <button
           type="submit"
           className="w-full bg-[#d4a853] hover:bg-[#c49943] text-foreground font-medium py-4 rounded-full transition-colors"
@@ -102,6 +111,6 @@ export default function ContactPage() {
           Trimite
         </button>
       </form>
-    </main>
+    </motion.main>
   );
 }

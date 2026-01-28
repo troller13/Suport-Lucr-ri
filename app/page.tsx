@@ -14,7 +14,7 @@ export default function Home() {
       <WhyUsSection />
       <TestimonialsSection />
       <BannerSection />
-      <BlogSection />
+
       <ContactPage />
       <Footer />
     </main>

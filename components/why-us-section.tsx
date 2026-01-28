@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const features = [
   {
     title: "Experiență și profesionalism",
@@ -40,14 +44,21 @@ export function WhyUsSection() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
           {features.map((feature, index) => (
-            <div key={index} className="text-center">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="text-center"
+            >
               <h3 className="font-serif text-xl md:text-2xl text-foreground mb-4">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
