@@ -22,7 +22,7 @@ export default function ContactPage() {
       </p>
 
       <form
-        action="https://formsubmit.co/dumitruarbuz9@gmail.com"
+        action="https://formsubmit.co/teza_ta@mail.ru"
         method="POST"
         className="max-w-md mx-auto space-y-6"
       >
