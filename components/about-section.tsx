@@ -8,7 +8,15 @@ import { motion, AnimatePresence } from "framer-motion";
 export function AboutSection() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const longText = `Suntem o companie cu experiență în domeniul academic... (text complet)`;
+  const longText = `
+Suntem o companie cu experiență în domeniul academic, activând de mai mulți ani în realizarea lucrărilor pentru facultăți. 
+Ne specializăm în teze de licență și disertații de master, precum și în proiecte și lucrări de curs pentru diverse domenii de studiu, de la economie, drept și inginerie până la IT și științe sociale.
+
+Punem accent pe documentare riguroasă, redactare clară și respectarea tuturor normelor academice. 
+Fiecare lucrare este adaptată cerințelor fiecărei instituții și coordonator, garantând originalitate, calitate și livrare la termen.
+
+Echipa noastră oferă suport complet pe tot parcursul colaborării, inclusiv consultanță, revizuiri și ajustări, asigurându-ne că rezultatul final reflectă cele mai înalte standarde academice și satisface așteptările studenților.
+`;
 
   return (
     <>
@@ -33,7 +41,8 @@ export function AboutSection() {
               </h2>
               <p className="text-foreground text-base md:text-lg leading-relaxed mb-8 max-w-xl">
                 Suntem o companie specializată în realizarea tezelor pentru
-                facultăți, oferind suport academic personalizat...
+                facultăți, oferind suport academic personalizat și lucrări de
+                calitate, adaptate cerințelor fiecărui student.
               </p>
               <button
                 onClick={() => setIsOpen(true)}
@@ -96,7 +105,7 @@ export function AboutSection() {
               </div>
 
               <div className="p-6">
-                <h3 className="font-serif text-2xl mb-4">Despre noi</h3>
+                <h3 className="font-serif text-2xl mb-4"></h3>
                 <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                   {longText}
                 </p>

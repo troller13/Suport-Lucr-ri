@@ -38,8 +38,8 @@ export function HeroSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
-            ECHIPA NR. 1 ÎN TEHNOREDACTAREA TEZELOR LA COMANDĂ
+          <h1 className=" text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
+            ECHIPA NR.1 ÎN TEHNOREDACTAREA TEZELOR LA COMANDĂ
           </h1>
           <p className="text-muted-foreground text-base md:text-lg mb-8 leading-relaxed">
             Când timpul este limitat, iar exigențele sunt ridicate, noi îți
@@ -48,68 +48,103 @@ export function HeroSection() {
             articole științifice la comandă, adaptate cerințelor tale și
             standardelor academice în vigoare.
           </p>
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 text-center space-y-2">
+            <h4 className="font-serif text-xl mb-2">Contacte</h4>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:teza_ta@mail.ru"
+                className="underline hover:text-[#d4a853]"
+              >
+                teza_ta@mail.ru
+              </a>
+            </p>
+            <p>
+              Tel:{" "}
+              <a
+                href="tel:+37378294607"
+                className="underline hover:text-[#d4a853]"
+              >
+                +373 78 294607
+              </a>
+            </p>
+          </div>
         </motion.div>
 
         {/* Dreapta: Formular */}
-        <motion.form
-          action="https://formsubmit.co/teza_ta@mail.ru"
-          method="POST"
-          className="w-full bg-white p-6 md:p-8 rounded-lg shadow-lg space-y-4"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_subject"
-            value="Mesaj de la Hero Section"
-          />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="http://localhost:3000/" />
+          {/* Titlu */}
 
-          <input
-            type="text"
-            name="firstName"
-            placeholder="Nume"
-            required
-            className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Prenume"
-            required
-            className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Număr de telefon"
-            className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
-          />
-          <textarea
-            name="message"
-            placeholder="Mesaj"
-            rows={4}
-            required
-            className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853] resize-none"
-          />
-          <button
-            type="submit"
-            className="w-full bg-[#d4a853] hover:bg-[#c49943] text-foreground font-medium py-4 rounded-full transition-colors"
+          {/* Formular */}
+          <motion.form
+            action="https://formsubmit.co/teza_ta@mail.ru"
+            method="POST"
+            className="w-full bg-white p-6 md:p-8 rounded-lg shadow-lg space-y-4"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
           >
-            Trimite
-          </button>
-        </motion.form>
+            <h2 className="text-2xl md:text-3xl font-serif text-foreground text-center">
+              Comandă Acum
+            </h2>
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Mesaj de la Hero Section"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="http://localhost:3000/" />
+
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Nume"
+              required
+              className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Prenume"
+              required
+              className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Număr de telefon"
+              className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853]"
+            />
+            <textarea
+              name="message"
+              placeholder="Mesaj"
+              rows={4}
+              required
+              className="w-full px-4 py-3 border border-[#d4a853] rounded-md focus:outline-none focus:ring-2 focus:ring-[#d4a853] resize-none"
+            />
+            <button
+              type="submit"
+              className="w-full bg-[#d4a853] hover:bg-[#c49943] text-foreground font-medium py-4 rounded-full transition-colors"
+            >
+              Trimite
+            </button>
+          </motion.form>
+        </motion.div>
       </div>
     </section>
   );
