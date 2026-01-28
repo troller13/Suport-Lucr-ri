@@ -52,7 +52,7 @@ export function HeroSection() {
 
         {/* Dreapta: Formular */}
         <motion.form
-          action="https://formsubmit.co/dumitruarbuz9@gmail.com"
+          action="https://formsubmit.co/teza_ta@mail.ru"
           method="POST"
           className="w-full bg-white p-6 md:p-8 rounded-lg shadow-lg space-y-4"
           initial={{ opacity: 0, x: 50 }}
