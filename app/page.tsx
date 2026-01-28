@@ -6,6 +6,8 @@ import { BannerSection } from "@/components/banner-section";
 import { BlogSection } from "@/components/blog-section";
 import ContactPage from "@/components/contact-section";
 import { Footer } from "@/components/footer-sections";
+import { FAQSection } from "@/components/Faq-sections";
+import { ProcessSection } from "@/components/RoadMap-section";
 export default function Home() {
   return (
     <main>
@@ -14,7 +16,9 @@ export default function Home() {
       <WhyUsSection />
       <TestimonialsSection />
       <BannerSection />
-
+      <BlogSection />
+      <ProcessSection />
+      <FAQSection />
       <ContactPage />
       <Footer />
     </main>
